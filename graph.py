@@ -18,7 +18,7 @@ graph.nodes()
 graph.edges()
 
 for i in ['a','b','c','d','e','z']:
-print(i, graph.degree(i))
+    print(i, graph.degree(i))
 
 A=nx.adjacency_matrix(graph, nodelist=None, weight='Distance')
 
@@ -27,10 +27,10 @@ print(A.todense())
 nx.shortest_path(graph, source='a', target='z', weight='Distance', method='dijkstra')
 
 class Tree(object):
-def __init__(self):
-self.left = None
-self.right = None
-self.data = None
+    def __init__(self):
+        self.left = None
+        self.right = None
+        self.data = None
 root = Tree()
 root.data = "root"
 root.left = Tree()
